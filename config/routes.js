@@ -34,17 +34,31 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  },
-  '/login': {
-    view: 'login'
-  },
-  '/resbusqueda': {
-    view: 'resbusqueda1'
-  } 
-  
-  
-
-
+  }
+  ,
+  '/login_usuario': {
+    view: 'login_usuario'
+  }
+  ,
+  '/login_admin': {
+    view: 'login_admin'
+  }
+  ,
+  '/login_local': {
+    view: 'login_local'
+  }
+  ,
+  '/consultar_usuario': {
+    view: 'consultar_usuario'
+  }
+  ,
+  '/consultar_admin': {
+    view: 'consultar_admin'
+  }
+  ,
+  '/consultar_local': {
+    view: 'consultar_local'
+  }
 
   /***************************************************************************
   *                                                                          *
