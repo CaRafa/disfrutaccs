@@ -8,40 +8,27 @@
 module.exports = {
 
   connection: 'mysql',
+  
   attributes: {
     nombre: {
-      type: 'string'
-    },
-    apellido: {
-      type: 'string'
+      type: 'string',
+      required: true
     },
     correo: {
-      type: 'string'
-      
+      type: 'string',
+      required: true,
+      email: true
     },
     sexo: {
-      type: 'string'
+      type: 'string',
+      required: true
       
     },
     IDusuario: {
       type: 'string',
-      unique: true
-    }/*,
-     edad: {
-      type: 'int'
-    },
-        dia: {
-      type: 'int'
-    },
-    mes: {
-      type: 'int'
-    },
-    ano: {
-      type: 'int'
-    },
-    puntaje: {
-      type: 'int'
-    }*/
+      unique: true,
+      required: true
+    }
   }
 };
 

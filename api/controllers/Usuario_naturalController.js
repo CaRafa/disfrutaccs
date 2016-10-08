@@ -7,4 +7,37 @@
 
 module.exports = {
 
+	registrar: function(req,res){
+		res.view();
+	}
+    ,
+
+
+    create: function(req,res,next){
+    
+    Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
+    	if(err) return next(err);
+        
+        res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
+
+     });
+},
+
+
+	mostrar: function(req,res,next){
+
+
+    Usuario_natural.findOne({id: req.param('id')}).exec(function(err,resultado){
+    
+    if (err) {return res.serverError(err);}
+    
+    console.log(resultado);
+    return res.view({Usuario_natural:resultado});
+        
+     });
+
+   }
+
+
+
  };
