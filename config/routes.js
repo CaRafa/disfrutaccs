@@ -37,11 +37,10 @@ module.exports.routes = {
   },
   '/login': {
     view: 'login'
-  },
-  '/resbusqueda': {
-    view: 'resbusqueda1'
-  } 
-  
+  }/*,
+  '/mostrar' : {
+    view: 'mostrar'
+  }*/
   
 
 

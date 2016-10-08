@@ -30,12 +30,10 @@ module.exports = {
     Usuario_natural.findOne({id: req.param('id')}).exec(function(err,resultado){
     
     if (err) {return res.serverError(err);}
-    
-    console.log(resultado);
-    return res.view({Usuario_natural:resultado});
+   
+    res.view({Usuario_natural:resultado});
         
      });
-
    }
 
 
