@@ -21,11 +21,10 @@ module.exports = {
         res.redirect ('/Usuario_natural/mostrar/?IDusuario='+ Usuario_natural.IDusuario);
 
      });
-},
+    },
 
 
 	mostrar: function(req,res,next){
-
 
     Usuario_natural.findOne({IDusuario: req.param('IDusuario')}).exec(function(err,resultado){
     
@@ -34,7 +33,31 @@ module.exports = {
     res.view({Usuario_natural:resultado});
         
      });
-   }
+    },
+    
+    consultar: function(req,res){
+     res.view();
+    },
+
+    buscar: function(req,res,next){
+
+    Usuario_natural.findOne({IDusuario: req.param('IDusuario')}).exec(function(err,resultado){
+    
+    if (err) {return res.serverError(err);}
+
+    if(resultado !== undefined) {
+    console.log(resultado);
+    res.view({Usuario_natural:resultado});
+    }
+    if(resultado === undefined){
+    return res.notFound('Could not find, sorry.');}
+
+        
+     });	
+    } 
+
+
+
 
 
 
