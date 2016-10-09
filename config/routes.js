@@ -33,20 +33,16 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
-<<<<<<< HEAD
+    view: 'homepage'}
+/*<<<<<<< HEAD
   },
   '/login': {
-    view: 'login'
-  }/*,
+    view: 'login'*/
+ /* }/*,
   '/mostrar' : {
     view: 'mostrar'
   }*/
-  
-
-
-=======
-  }
+ /* }
   ,
   '/login_usuario': {
     view: 'login_usuario'
@@ -70,8 +66,7 @@ module.exports.routes = {
   ,
   '/consultar_local': {
     view: 'consultar_local'
-  }
->>>>>>> origin/master
+  }*/
 
   /***************************************************************************
   *                                                                          *

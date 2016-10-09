@@ -6,7 +6,7 @@
  */
 module.exports = {
 
-<<<<<<< HEAD
+
   connection: 'mysql',
   
   attributes: {
@@ -14,16 +14,26 @@ module.exports = {
       type: 'string',
       required: true
     },
+    apellido:{
+      type: 'string'
+    },
     correo: {
       type: 'string',
-      required: true,
       email: true
     },
     sexo: {
       type: 'string',
+    },
+    IDusuario: {
+      type: 'string',
       required: true
+    } 
+
+  }
+
+};
       
-=======
+/*
 connection: 'mysql',
 tableName: 'Usuario_Natural'
   attributes: {
@@ -97,5 +107,5 @@ tableName: 'Usuario_Natural'
     }
   }
 };
-
+*/
 

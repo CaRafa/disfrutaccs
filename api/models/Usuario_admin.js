@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-
+/*
 connection: 'mysql',
 tableName: 'Usuario_Administrador'
   attributes: {
@@ -36,6 +36,6 @@ tableName: 'Usuario_Administrador'
       type: 'string',
          columnName: 'Contraseña'
     }
-  }
+  }*/
 };
 
