@@ -18,7 +18,7 @@ module.exports = {
     Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
     	if(err) return next(err);
         
-        res.redirect ('/Usuario_natural/mostrar/?IDusuario='+ Usuario_natural.IDusuario);
+        res.redirect ('/Usuario_natural/mostrar/?IDusuario='+ Usuario_natural.id);
 
      });
     },

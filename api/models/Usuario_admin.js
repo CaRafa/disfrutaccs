@@ -1,41 +1,35 @@
 /**
- * Usuario_Admin.js
+ * Usuario_administrador.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
-/*
-connection: 'mysql',
-tableName: 'Usuario_Administrador'
+  connection: 'mysql',
   attributes: {
     idUsuario_Ad: {
       type: 'int',
       unique: true,
-      primaryKey: true,
-      columnName: 'idUsuario_Ad'
+      primaryKey: true
     },
     Nombre: {
-      type: 'string',
-         columnName: 'Nombre'
+      type: 'string'
     },
     Apellido: {
-      type: 'string',
-         columnName: 'Apellido'
+      type: 'string'
+    },
+     Fecha_de_nacimiento: {
+      type: 'date'
     },
     Correo: {
       type: 'string',
-         columnName: 'Correo'
-    },
-    Fecha_de_nacimiento: {
-      type: 'date',
-         columnName: 'Fecha_de_nacimiento'
+      email:true,
+      unique: true
     },
     Contraseña: {
-      type: 'string',
-         columnName: 'Contraseña'
+      type: 'string'
     }
-  }*/
+  }
 };
 

@@ -1,111 +1,60 @@
 /**
- * Usuario_Natural.js
+ * Usuario_natural.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
+
 module.exports = {
-
-
   connection: 'mysql',
-  
-  attributes: {
-    nombre: {
-      type: 'string',
-      required: true
-    },
-    apellido:{
-      type: 'string'
-    },
-    correo: {
-      type: 'string',
-      email: true
-    },
-    sexo: {
-      type: 'string',
-    },
-    IDusuario: {
-      type: 'string',
-      required: true
-    } 
-
-  }
-
-};
-      
-/*
-connection: 'mysql',
-tableName: 'Usuario_Natural'
   attributes: {
     idUsuario_U: {
       type: 'int',
        unique: true,
-      primaryKey: true,
-      columnName: 'idUsuario_U'
+        autoPK: true
     },
     Nombre: {
-      type: 'string',
-      columnName: 'Nombre'
+      type: 'string'
     },
     Apellido: {
-      type: 'string',
-      columnName: 'Apellido'
+      type: 'string'
     },
     Edad: {
-      type: 'int',
-      columnName: 'Edad'
->>>>>>> origin/master
+      type: 'int'
     },
-    //Que la foto de perfil sea un entero es meramente provisional es para que ya este ahi la variable
     Foto_perfil: {
-      type: 'int',
-      columnName: 'Foto_perfil'
+      type: 'int'
     },
     Correo: {
       type: 'email',
-      unique: true,
-      columnName: 'Correo'
+      email:true,
+      unique: true
     },
     Alias: {
       type: 'string',
-<<<<<<< HEAD
-      unique: true,
-      required: true
-=======
-       unique: true,
-      columnName: 'Alias'
+       unique: true
     },
     Fecha_de_nacimiento: {
-      type: 'date',
-      columnName: 'Fecha_de_nacimiento'
+      type: 'date'
     },
     sexo: {
-      type: 'string',
-      columnName: 'sexo'
+      type: 'string'
     },
     Puntos: {
-      type: 'float',
-      columnName: 'Puntos'
+      type: 'float'
     },
     Presupuesto: {
-      type: 'float',
-      columnName: 'Presupuesto'
+      type: 'float'
     },
     Latitud: {
-      type: 'float',
-      columnName: 'Latitud'
+      type: 'float'
     },
     Longitud: {
-      type: 'float',
-      columnName: 'Longitud'
+      type: 'float'
     },
     Contraseña: {
       type: 'string',
-      unique: true,
-      columnName: 'Contraseña'
->>>>>>> origin/master
+      unique: true
     }
-  }
+  } 
 };
-*/
-

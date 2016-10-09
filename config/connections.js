@@ -28,9 +28,9 @@ module.exports.connections = {
   * Installed by default.                                                    *
   *                                                                          *
   ***************************************************************************/
-/*  localDiskDb: {
+localDiskDb: {
     adapter: 'sails-disk'
-  },*/
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -44,7 +44,7 @@ module.exports.connections = {
      adapter: 'sails-mysql',
      host: 'localhost',
      user: 'root', //optional
-     password: '25840147', //optional
+     password: '131296SchulzMORETON', //optional
      database: 'disfrutaccs' //optional
    },
 

@@ -1,23 +1,47 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1> Registrar Usuario </h1>
-	<form action="/usuario_natural/create" method="POST">
-    <table>
-        <tr><td>nombre:<td><input type="text" name="nombre"><br/>
-        <tr><td>apellido:<td><input type="text" name="apellido"><br/>
-        <tr><td>correo:<td><input type="text" name="correo"><br/>
-        <tr><td>sexo:<td><input type="text" name="sexo"><br/>
-        <tr><td>IDusuario:<td><input type="text" name="IDusuario"><br/>
-        <tr><td><td><input type="submit" value="Registrar">
+<form action="/Usuario_natural/create" method="POST" >
+<div align="center">
+  <h2>Registro de Usuario</h2>
+<label for="name">Nombre y apellido</label ><br/>
+  <input type="text" placeholder="Nombre" name="Nombre" size="20" maxlength="45" >
+   <input type="text" placeholder="Apellido" name="Apellido" size="20" maxlength="45" ><br />
+   <br/>
+   <label for="name">Edad</label ><br/>
+    <input type="number" name="Edad" size="20" maxlength="45" ><br />
+    <br/>
+    <label for="name">Correo Electronico</label ><br/>
+     <input type="email" placeholder="pepitoperez@correo.com" name="Correo" size="20" maxlength="200" ><br />
+     <br/>
+     <label for="name">Alias</label ><br/>
+     <input type="text" placeholder="Rockpepe" name="Alias" size="20" maxlength="45" ><br />
+     <br/>
+     <label for="name">Fecha de Nacimiento</label ><br/>
+     <input type="date" name="Fecha_de_nacimiento" size="20" maxlength="45" ><br />
+     <br/>
+     <label for="name">Sexo</label ><br/>
+      <input type="radio" placeholder="Masculino" name="Sexo" value="Masculino"/>Masculino
+      <input type="radio" placeholder="Femenido" name="Sexo" value="Femenino"/>Femenino
+      <input type="radio" placeholder="Otro" name="Sexo" value="Otro"/>Otro
+      <br/>
+      <br/>
+       <label for="name">Presupuesto</label ><br />
+      <input type="text" placeholder="Presupuesto" name="Presupuesto" size="20" maxlength="45" />
+      <script type="text/javascript" src="https://form.jotformz.com/jsform/62823544695667"></script>
+ <label for="name">Ubicacion</label ><br/>
+  <input type="text" placeholder="Latitud" name="Latitud" size="20" maxlength="20" ><br />
+   <br/>
+  <input type="text" placeholder="Longitud" name="Longitud" size="20" maxlength="20" ><br />
+  <br/>
+   <label for="name">Contraseña</label ><br/>
+   <br/>
+  <input type="password" placeholder="Contraseña" name="Contraseña" size="20" maxlength="20" ><br />
+  <br/>
+  <br/>
+  <input type="submit" value="Create Usuario_natural" />
+  <br/>
+  <br/>
+  <br/>
+  <div>
 </form>
-
-</body>
-</html>
-
-
-
 
 
 
