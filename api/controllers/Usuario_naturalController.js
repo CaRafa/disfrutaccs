@@ -18,7 +18,7 @@ module.exports = {
     Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
     	if(err) return next(err);
         
-        res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
+        res.redirect ('/Usuario_natural/mostrar/?IDusuario='+ Usuario_natural.IDusuario);
 
      });
 },
@@ -27,10 +27,10 @@ module.exports = {
 	mostrar: function(req,res,next){
 
 
-    Usuario_natural.findOne({id: req.param('id')}).exec(function(err,resultado){
+    Usuario_natural.findOne({IDusuario: req.param('IDusuario')}).exec(function(err,resultado){
     
     if (err) {return res.serverError(err);}
-   
+    console.log(resultado);
     res.view({Usuario_natural:resultado});
         
      });
