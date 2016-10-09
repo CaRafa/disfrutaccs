@@ -44,7 +44,7 @@ localDiskDb: {
      adapter: 'sails-mysql',
      host: 'localhost',
      user: 'root', //optional
-     password: '131296SchulzMORETON', //optional
+     password: '25840147', //optional
      database: 'disfrutaccs' //optional
    },
 
