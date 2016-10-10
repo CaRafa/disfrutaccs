@@ -34,7 +34,8 @@ module.exports = {
     },
     Alias: {
       type: 'string',
-       unique: true
+       unique: true,
+       required: true
     },
     Fecha_de_nacimiento: {
       type: 'date'
@@ -56,7 +57,8 @@ module.exports = {
     },
     Contraseña: {
       type: 'string',
-      unique: true
+      unique: true,
+      required: true
     }
   } 
 };

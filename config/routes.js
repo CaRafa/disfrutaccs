@@ -37,6 +37,10 @@ module.exports.routes = {
 
   '/registro': {
     view: 'registro'
+  },
+
+  '/consulta': {
+    view: 'consulta'
   }
   
 /*<<<<<<< HEAD

@@ -8,17 +8,17 @@
 module.exports = {
   connection: 'mysql',
     attributes: {
-    idLocal: {
-    type: 'int',
-    unique: true,
-    primaryKey: true
-    },
+    /*idLocal: {
+    type: 'string',
+    unique: true
+    },*/
     Nombre: {
-      type: 'string'
-    },
+      type: 'string',
+      required: true
+    },/*
     Foto_perfil: {
       type: 'int'
-    },
+    },*/
     Edad_minima: {
       type: 'int'
     },
@@ -34,13 +34,13 @@ module.exports = {
     Puntaje: {
       type: 'float'
     },
-    Precio_base: {
+    Preciobase: {
       type: 'float'
     },
     Telefono: {
       type: 'int'
     },
-    Tipo_de_local: {
+    Tipodelocal: {
       type: 'string'
     },
     descripcion: {
