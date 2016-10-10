@@ -12,7 +12,6 @@ module.exports = {
 	}
     ,
 
-
     create: function(req,res,next){
     
     Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
@@ -56,10 +55,5 @@ module.exports = {
         
      });	
     } 
-
-
-
-
-
 
  };

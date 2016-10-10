@@ -8,11 +8,10 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-
     idUsuario_U: {
       type: 'int',
-       unique: true,
-        autoPK: true
+      unique: true,
+      autoPK: true
     },
     Nombre: {
       type: 'string'

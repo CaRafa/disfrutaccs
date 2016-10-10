@@ -11,8 +11,9 @@ module.exports = {
     idUsuario_Ad: {
       type: 'int',
       unique: true,
-      primaryKey: true
+      autoPK: true
     },
+
     Nombre: {
       type: 'string'
     },
@@ -21,6 +22,10 @@ module.exports = {
     },
      Fecha_de_nacimiento: {
       type: 'date'
+    },
+    Alias: {
+      type: 'string',
+       unique: true
     },
     Correo: {
       type: 'string',
