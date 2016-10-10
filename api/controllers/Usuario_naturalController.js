@@ -12,13 +12,17 @@ module.exports = {
 	}
     ,
 
-
     create: function(req,res,next){
     
     Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
-    	if(err) return next(err);
+    	if(err) {return next(err);}
+
+        res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
         
+<<<<<<< HEAD
         res.redirect ('/Usuario_natural/mostrar/?id='+ Usuario_natural.id);
+=======
+>>>>>>> origin/master
 
      });
     },
@@ -26,7 +30,11 @@ module.exports = {
 
 	mostrar: function(req,res,next){
 
+<<<<<<< HEAD
     Usuario_natural.findOne({id: req.param('IDusuario')}).exec(function(err,resultado){
+=======
+    Usuario_natural.findOne({id: req.param('id')}).exec(function(err,resultado){
+>>>>>>> origin/master
     
     if (err) {return res.serverError(err);}
     console.log(resultado);
@@ -41,7 +49,7 @@ module.exports = {
 
     buscar: function(req,res,next){
 
-    Usuario_natural.findOne({IDusuario: req.param('IDusuario')}).exec(function(err,resultado){
+    Usuario_natural.findOne({Alias: req.param('Alias')}).exec(function(err,resultado){
     
     if (err) {return res.serverError(err);}
 
@@ -55,10 +63,5 @@ module.exports = {
         
      });	
     } 
-
-
-
-
-
 
  };

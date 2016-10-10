@@ -33,7 +33,12 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'}
+    view: 'inicio'},
+
+  '/registro': {
+    view: 'registro'
+  }
+  
 /*<<<<<<< HEAD
   },
   '/login': {

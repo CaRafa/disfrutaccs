@@ -10,11 +10,12 @@ module.exports = {
   attributes: {
     idUsuario_U: {
       type: 'int',
-       unique: true,
-        autoPK: true
+      unique: true,
+      autoPK: true
     },
     Nombre: {
       type: 'string'
+      , required: true
     },
     Apellido: {
       type: 'string'
@@ -28,7 +29,8 @@ module.exports = {
     Correo: {
       type: 'email',
       email:true,
-      unique: true
+      unique: true,
+      required: true
     },
     Alias: {
       type: 'string',

@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/styles/main.css">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+<body>
+
+
+<nav class="se-gris padding-largo text-center">
+<ul class="no lista" id="no-lista">
+
+  <li class="col-md-3 inline-block" > <a href="http://localhost:1337/"> DisfrutaCcs </a> </li>
+  <li class="col-md-3 inline-block">Consultar</li>
+
+
+</ul>
+</nav>
+
+
+  <form action="/Usuario_admin/create" method="POST" >
+
+<br>
+  <div align="center">
+
+  <h1 class="pacifico verde">Registro de Administrador</h1>
+  
+  <br>
+  
+  <label for="name" class="lato espacio-derecha"> Nombre</label >
+  <label for="name" class="lato"> Apellido</label >
+  <br>
+
+
+  <input type="text" class="text-center" placeholder="Nombre" name="Nombre" size="20" maxlength="45" >
+  
+  <input type="text" class="text-center" placeholder="Apellido" name="Apellido" size="20" maxlength="45" >
+
+  <br/>
+  <br/>
+  <label for="name" class="lato">Correo Electronico</label >
+
+  <br/>
+
+  <input type="email" class="text-center" placeholder="pepitoperez@correo.com" name="Correo" size="20" maxlength="200" >
+  <br/>
+  <br/>
+  
+  <label for="name" class="lato">Alias</label ><br/>
+  <input type="text" class="text-center" placeholder="Rockpepe" name="Alias" size="20" maxlength="45" >
+  <br/>
+
+  <br/>
+  <label for="name" class="lato">Fecha de Nacimiento</label >
+
+  <br/>
+  <input type="date" class="text-center" name="Fecha_de_nacimiento" size="20" maxlength="45" >
+  <br />
+
+  <br/>
+      
+
+  <label for="name" class="lato">Contraseña</label >
+
+  <br/>
+  <input type="password" class="text-center" placeholder="Contraseña" name="Contraseña" size="20" maxlength="20" >
+  <br/>
+  <br/>
+  <br/>
+
+  <div align = "center">
+  <input type="submit" class="lato" value="Registrar Administrador" action="/usuario_admin/registrar"> 
+
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <div>
+</form>
+
+</body>
+</html>
+
+
+
