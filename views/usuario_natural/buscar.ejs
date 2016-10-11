@@ -3,19 +3,37 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h5> Usuario buscado </h5>
-<h1><%= Usuario_natural.Nombre %></h1>
-<hr>
-<h2> ID <%= Usuario_natural.id %></h1>
-<h3><%= Usuario_natural.Correo %></h1>
-<h4> Nombre de usuario <%= Usuario_natural.Alias %></h1>
+
+<h5> Usuario/s </h5>
+<table>
+<tr> 
+<th> Nombre </th>
+<th> Alias </th>
+<th> Correo </th>
+<th> </th>
+<th> </th>
+<th> </th>
+</tr>
+
+<%_.each (Usuario_natural, function(Usuario_natural){ %>
+<tr data-id= "<%= Usuario_natural.id%>" data-model="Usuario_natural">
+<td><%= Usuario_natural.Nombre %></td>
+<td><%= Usuario_natural.Alias %></td>
+<td><%= Usuario_natural.Correo %></td>
+<td><a href="/Usuario_natural/mostrar/<%= Usuario_natural.id %>"> Perfil </a>></td>
+<td><a href="/Usuario_natural/editar/<%= Usuario_natural.id %>"> editar </a>></td>
+
+
+</tr>
+<% }) %>
+</table>
+
 <form action="/usuario_natural/consultar" >
 <tr><td><td><input type="submit" value="volver"></td></td></tr>
 </form>
 
 </body>
 </html>
-
 
 
 

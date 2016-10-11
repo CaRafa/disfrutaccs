@@ -25,9 +25,9 @@ module.exports = {
 
 
 	mostrar: function(req,res,next){
-
     Usuario_natural.findOne({id: req.param('id')}).exec(function(err,resultado){
-    
+
+    console.log(resultado)
     if (err) {return res.serverError(err);}
     console.log(resultado);
     res.view({Usuario_natural:resultado});
@@ -41,7 +41,7 @@ module.exports = {
 
     buscar: function(req,res,next){
 
-    Usuario_natural.findOne({Alias: req.param('Alias')}).exec(function(err,resultado){
+    Usuario_natural.find({Alias:{'contains':req.param('Alias')} }).exec(function(err,resultado){
     
     if (err) {return res.serverError(err);}
 
