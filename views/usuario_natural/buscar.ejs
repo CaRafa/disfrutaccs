@@ -11,8 +11,6 @@
 <th> Alias </th>
 <th> Correo </th>
 <th> </th>
-<th> </th>
-<th> </th>
 </tr>
 
 <%_.each (Usuario_natural, function(Usuario_natural){ %>
@@ -20,9 +18,7 @@
 <td><%= Usuario_natural.Nombre %></td>
 <td><%= Usuario_natural.Alias %></td>
 <td><%= Usuario_natural.Correo %></td>
-<td><a href="/Usuario_natural/mostrar/<%= Usuario_natural.id %>"> Perfil </a>></td>
-<td><a href="/Usuario_natural/editar/<%= Usuario_natural.id %>"> editar </a>></td>
-
+<td><a href="/Usuario_natural/mostrar/<%= Usuario_natural.id %>"> Ver perfil </a>></td>
 
 </tr>
 <% }) %>

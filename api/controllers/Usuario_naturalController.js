@@ -54,6 +54,37 @@ module.exports = {
 
         
      });	
-    } 
+    } ,
+
+    editar: function(req,res,next){
+	Usuario_natural.findOne({id: req.param('id')}).exec(function(err,resultado){
+    if (err) {return res.serverError(err);}
+    
+    if(resultado !== undefined) {
+    res.view({Usuario_natural:resultado});
+    }
+    if(resultado === undefined){
+    return res.notFound('Errooor');}
+        
+     });
+    },
+
+    actualizar: function(req, res,next){
+
+    	Usuario_natural.update(req.param('id'), req.params.all() , function Usuario_naturalactualizado (err) {
+    	if(err) {return res.redirect('/Usuario_natural/editar/'+req.param('id'));}
+
+        res.redirect ('/Usuario_natural/mostrar/'+ req.param('id'));
+        
+     });
+    }
+
+
+
+
+
+
+
+
 
  };

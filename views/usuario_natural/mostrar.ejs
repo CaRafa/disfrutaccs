@@ -3,14 +3,19 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h5> Usuario </h5>
+<h5> Perfil de suario </h5>
 <h1><%= Usuario_natural.Nombre %></h1>
 <hr>
 <h2> Nombre de usuario: <%= Usuario_natural.Alias %></h1>
 <h3> Correo:<%= Usuario_natural.Correo %></h1>
 <h4> Presupuesto: <%= Usuario_natural.Presupuesto %></h1>
+
+<form action="/usuario_natural/editar/<%=Usuario_natural.id%>" >
+<tr><td><td><input type="submit" value="Editar perfil"></td></td></tr>
 <form action="/usuario_natural/registrar" >
 <tr><td><td><input type="submit" value="volver"></td></td></tr>
+<form action="/" >
+<tr><td><td><input type="submit" value="Menu principal"></td></td></tr>
 </form>
 
 </body>
