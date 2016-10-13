@@ -2,37 +2,87 @@
 
 <!DOCTYPE html>
 <html>
+
+<head>
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/styles/main.css">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<title> DisfrutaCcs </title>
+
+<style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
+</head>
+
 <body>
 
-<h5> Usuario/s </h5>
+<nav class="se-gris padding-largo text-center">
+<ul class="no lista" id="no-lista">
+
+  <li class="col-md-3 inline-block lato " > <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
+</nav>
+
+  <div align="center">
+
+
+<h5 class= "pacifico grande verde"> Usuario/s </h5>
+<hr>
+<br>
 <table>
 <tr> 
-<th> Nombre </th>
-<th> Alias </th>
-<th> Correo </th>
-<th> </th>
+	<th class="lato text-center"> Nombre </th>
+	<th class="lato text-center"> Usuario </th>
+	<th class="lato text-center"> Correo </th>
+	<th class="lato text-center"> Perfil </th>
+
 </tr>
 
 <%_.each (Usuario_natural, function(Usuario_natural){ %>
-<tr data-id= "<%= Usuario_natural.id%>" data-model="Usuario_natural">
-<td><%= Usuario_natural.Nombre %></td>
-<td><%= Usuario_natural.Alias %></td>
-<td><%= Usuario_natural.Correo %></td>
-<td><a href="/Usuario_natural/mostrar/<%= Usuario_natural.id %>"> Ver perfil </a>></td>
+
+<tr data-id= "<%= Usuario_natural.id%>" data-model="Usuario_natural" >
+
+<td class="lato "><%= Usuario_natural.Nombre %></td>
+
+<td class="lato "><%= Usuario_natural.Alias %></td>
+
+<td class="lato "><%= Usuario_natural.Correo %></td>
+
+<td class="lato verde"><a href="/Usuario_natural/mostrar/<%= Usuario_natural.id %>"> Ver perfil </a>></td>
 
 </tr>
+
 <% }) %>
 </table>
-
+<br>
 <form action="/usuario_natural/consultar" >
-<tr><td><td><input type="submit" value="volver"></td></td></tr>
+<tr><td><td><input type="submit" value= "Volver" class= "lato"></td></td></tr>
 </form>
 
+
+</div>
 </body>
 </html>
-
-
-
-
-
-

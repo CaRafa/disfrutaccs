@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/styles/main.css">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<title> DisfrutaCcs </title>	
+
+</head>
+
+
+  <div align="center">
+
 <body>
 
+<nav class="se-gris padding-largo text-center">
+<ul class="no lista" id="no-lista">
+
+  <li class="col-md-3 inline-block lato " > <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
+</nav>
+
+
 <form action = "/Usuario_natural/actualizar/<%= Usuario_natural.id %>" method= "POST">
-<h1> Editar Perfil </h1>
+<h1 class="pacifico grande verde"> Editar Perfil </h1>
+<hr>
 
-<input value= "<%=  Usuario_natural.Nombre %>" type="text" name="Nombre"><br />
-<input value= "<%=  Usuario_natural.Correo %>" type="text" name="Correo"><br />
-<input value= "<%=  Usuario_natural.Apellido %>" type="text" name="Apellido"><br />
-<input value= "<%=  Usuario_natural.Presupuesto %>" type="text" name="Presupuesto"><br />
-<input type="submit" value = "editar Perfil">
+<h4 class = "lato "> Nombre </h1>
+<input value= "<%=  Usuario_natural.Nombre %>" type="text" name="Nombre" class="lato text-center"><br />
+
+<h4 class = "lato "> Apellido </h1>
+<input value= "<%=  Usuario_natural.Apellido %>" type="text" name="Apellido" class="lato text-center"><br />
+
+<h4 class = "lato "> Correo </h1>
+<input value= "<%=  Usuario_natural.Correo %>" type="text" name="Correo" class="lato text-center"><br />
+
+<h4 class = "lato "> Presupuesto </h1>
+<input value= "<%=  Usuario_natural.Presupuesto %>" type="text" name="Presupuesto" class="lato text-center"><br />
+<br>
+<br>
+<input type="submit" value = "Guardar Cambios" class="lato">
 
 
-
+</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
