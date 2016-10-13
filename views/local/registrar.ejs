@@ -24,17 +24,24 @@
 </nav>
 
 
-<form action="/Local/create" method="POST" >
+  <form action="/Local/create" method="POST" >
+
   <div align="center">
+
+  
 
   <h1 class="pacifico verde">Registro de Local</h1>
   <hr>
   <br>
   
-  <label for="name" class="lato espacio-derecha"> Nombre</label >
-  <br>
+   <input type='hidden' name='owner' value='<%=Usuario_admin.id%> ' >
+   <h2>Local de <%=Usuario_admin.Nombre %>  </h2>
 
 
+   <label for="name" class="lato espacio-derecha"> Nombre</label >
+   <br>
+
+   
    <input type="text" class="text-center" placeholder="Nombre" name="Nombre" size="20" maxlength="45" >
 
    <br/>

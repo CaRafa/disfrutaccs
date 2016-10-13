@@ -45,7 +45,16 @@ module.exports = {
     },
     descripcion: {
       type: 'string'
+    },
+    owner: {
+    model:'Usuario_admin',
+    required: true
     }
+
+
+
+
+
   }
 };
 

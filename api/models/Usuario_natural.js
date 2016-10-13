@@ -8,20 +8,13 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-    idUsuario_U: {
-      type: 'int',
-      unique: true,
-      autoPK: true
-    },
+    
     Nombre: {
       type: 'string'
       , required: true
     },
     Apellido: {
       type: 'string'
-    },
-    Edad: {
-      type: 'int'
     },
     Foto_perfil: {
       type: 'int'
@@ -44,18 +37,12 @@ module.exports = {
       type: 'string'
     },
     Puntos: {
-      type: 'float'
+      type: 'int'
     },
     Presupuesto: {
       type: 'float'
     },
-    Latitud: {
-      type: 'float'
-    },
-    Longitud: {
-      type: 'float'
-    },
-    Contraseña: {
+      Contraseña: {
       type: 'string',
       unique: true,
       required: true

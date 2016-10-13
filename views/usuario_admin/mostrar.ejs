@@ -13,6 +13,18 @@
 <tr><td><td><input type="submit" value="volver"></td></td></tr>
 </form>
 
+<form action="/Local/registrar/" >
+<tr><td><td><input type="submit" value="Registrar Local"></td></td></tr>
+<input type='hidden' value= "<%= Usuario_admin.id %>" name='owner'>
+</form>
+
+<form action="/Local/buscar/" >
+<input type='hidden' value= "<%= Usuario_admin.id %>" name='owner'>
+<tr><td><td><input type="submit" value="Mis locales"></td></td></tr>
+</form>
+
+
+
 </body>
 </html>
 

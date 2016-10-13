@@ -8,12 +8,7 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-    idUsuario_Ad: {
-      type: 'int',
-      unique: true,
-      autoPK: true
-    },
-
+    
     Nombre: {
       type: 'string'
     },
@@ -34,7 +29,14 @@ module.exports = {
     },
     Contraseña: {
       type: 'string'
+    },
+    locales: {
+      collection: 'Local',
+      via:'owner'
     }
+
+
+
   }
 };
 

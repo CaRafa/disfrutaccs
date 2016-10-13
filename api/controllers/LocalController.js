@@ -8,18 +8,25 @@
 module.exports = {
 
     registrar: function(req,res){
-		res.view();
+		Usuario_admin.findOne(req.param('owner'), function encontraradmin (err, admin) {
+        if(err) {return next(err);}
+        
+        res.view({ Usuario_admin: admin });// ('/Local/mostrar/'+ Local.id);
+
+     });
 	},
 
 
     create: function(req,res,next){
     
-    Local.create(req.params.all(), function localcreado (err, Local) {
-    	if(err) {return next(err);}
+        Local.create(req.params.all(), function Localcreado (err, Local) {
+        if(err) {return next(err);}
 
         res.redirect ('/Local/mostrar/'+ Local.id);
+        
 
      });
+    
     },
 
     mostrar: function(req,res,next){
@@ -31,10 +38,44 @@ module.exports = {
     res.view({Local:resultado});
         
      });
+    },
+
+
+    consultar: function(req,res){
+     res.view();
+    },
+
+    buscar: function(req,res,next){
+        var nombre = req.param('Nombre');
+        var id = req.param('owner');
+
+        if(id !== undefined){ Local.find({owner:id}).exec(function(err,resultado){
+    
+         if (err) {return res.serverError(err);}
+
+         if(resultado !== undefined) {
+             console.log(resultado);
+             res.view({Local:resultado});
+         }
+         if(resultado === undefined){return res.notFound('No hay locales con ese nombre :c ');}
+
+            });  
+        };
+
+        if(nombre !== undefined) {
+            Local.find({Nombre:{'contains':nombre}}).exec(function(err,resultado){
+    
+         if (err) {return res.serverError(err);}
+
+         if(resultado !== undefined) {
+            console.log(resultado);
+         res.view({Local:resultado});
+         }
+         if(resultado === undefined){
+            return res.notFound('No hay locales con ese nombre :c ');}
+             }); 
+         }
     }
-
-
-
 
 
 };
