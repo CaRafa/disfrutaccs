@@ -10,7 +10,8 @@ module.exports = {
   attributes: {
     
     Nombre: {
-      type: 'string'
+      type: 'string',
+      required: true
     },
     Apellido: {
       type: 'string'
@@ -20,15 +21,19 @@ module.exports = {
     },
     Alias: {
       type: 'string',
-       unique: true
+      unique: true,
+      required: true
     },
     Correo: {
-      type: 'string',
+      type: 'email',
       email:true,
-      unique: true
+      unique: true,
+      required: true
     },
     Contraseña: {
-      type: 'string'
+      type: 'string',
+      unique: true,
+      required: true
     },
     locales: {
       collection: 'Local',

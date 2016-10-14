@@ -39,6 +39,9 @@ module.exports = {
      res.view();
     },
 
+
+
+
     buscar: function(req,res,next){
 
     Usuario_admin.findOne({Alias: req.param('Alias')}).exec(function(err,resultado){

@@ -41,6 +41,10 @@ module.exports.routes = {
 
   '/consulta': {
     view: 'consulta'
+  },
+
+    '/entrar': {
+    view: 'entrar'
   }
   
 /*<<<<<<< HEAD
