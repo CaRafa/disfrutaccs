@@ -1,5 +1,5 @@
 /**
- * Usuario_administrador.js
+ * Eventos.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -13,31 +13,25 @@ module.exports = {
       type: 'string',
       required: true
     },
-    Apellido: {
+    Categoria: {
       type: 'string'
     },
-     Fecha_de_nacimiento: {
-      type: 'date'
+     Descripcion: {
+      type: 'string'
     },
-    Alias: {
-      type: 'string',
-      unique: true,
+    Fecha_ini: {
+      type: 'date',
       required: true
     },
-    Correo: {
-      type: 'email',
-      email:true,
-      unique: true,
+    Fecha_cul: {
+      type: 'date',
       required: true
     },
-    Contraseña: {
-      type: 'string',
-      unique: true,
-      required: true
+    Edad_min: {
+      type: 'int'
     },
-    locales: {
-      collection: 'Local',
-      via:'owner'
+    Nro_resenas: {
+      type: 'int'
     }
    }
 };
