@@ -44,7 +44,6 @@ module.exports = {
     },
       Contraseña: {
       type: 'string',
-      unique: true,
       required: true
     }
   } 

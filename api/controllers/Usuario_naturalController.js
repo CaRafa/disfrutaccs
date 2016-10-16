@@ -17,10 +17,10 @@ module.exports = {
     Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
     	if(err) {return next(err);}
 
-        res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
-        
+                
+          res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
 
-     });
+      });
     },
 
 
@@ -46,6 +46,7 @@ module.exports = {
     if (err) {return res.serverError(err);}
 
     if(resultado !== undefined) {
+
     console.log(resultado);
     res.view({Usuario_natural:resultado});
     }

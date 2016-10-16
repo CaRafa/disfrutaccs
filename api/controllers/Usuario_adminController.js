@@ -19,7 +19,6 @@ module.exports = {
 
         res.redirect ('/Usuario_admin/mostrar/'+ Usuario_admin.id);
         
-
      });
     },
 
