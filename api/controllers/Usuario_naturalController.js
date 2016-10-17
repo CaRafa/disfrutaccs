@@ -12,16 +12,29 @@ module.exports = {
 	}
     ,
 
+
     create: function(req,res,next){
     
     Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
-    	if(err) {return next(err);}
+        if(err) {return next(err);}
 
                 
           res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
 
       });
     },
+
+
+    /*create: function(req,res,next){
+    
+    Usuario_natural.findOrCreate({alias: req.param('alias')},{req.params.all()}).exec(function Usuario_naturalcreado(err, Usuario_natural) {
+    	if(err) {return next(err);}
+
+                
+          res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
+
+      });
+    },*/
 
 
 	mostrar: function(req,res,next){
