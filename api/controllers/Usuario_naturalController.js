@@ -14,7 +14,7 @@ module.exports = {
 
 
     create: function(req,res,next){
-    
+
     Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
         if(err) {return next(err);}
 
@@ -24,8 +24,34 @@ module.exports = {
       });
     },
 
-
     /*create: function(req,res,next){
+
+    Usuario_natural.find({Alias: req.param('Alias')}).exec(function(err,resultado){
+
+    if (err) {return res.serverError(err);}
+        
+    if(resultado===undefined)
+    {
+
+    Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
+        if(err) {return next(err);}
+
+                
+          res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
+
+          });
+
+    }
+
+    });
+    
+   else
+    { return res.notFound('Could not find, sorry.'); }
+
+    },
+
+
+    create: function(req,res,next){
     
     Usuario_natural.findOrCreate({alias: req.param('alias')},{req.params.all()}).exec(function Usuario_naturalcreado(err, Usuario_natural) {
     	if(err) {return next(err);}
