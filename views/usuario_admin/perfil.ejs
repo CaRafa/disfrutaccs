@@ -1,0 +1,41 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h5> Nuevo administrador creado </h5>
+<h1><%= Usuario_admin.Nombre %></h1>
+<hr>
+<h2> Nombre de usuario: <%= Usuario_admin.nombre %></h1>
+<h3><%= Usuario_admin.Correo %></h1>
+
+<form action="/usuario_admin/registrar" >
+<tr><td><td><input type="submit" value="volver"></td></td></tr>
+</form>
+
+<form action="/Local/registrar/" >
+<tr><td><td><input type="submit" value="Registrar Local"></td></td></tr>
+<input type='hidden' value= "<%= Usuario_admin.id %>" name='owner'>
+</form>
+
+<form action="/Local/buscar/" >
+<input type='hidden' value= "<%= Usuario_admin.id %>" name='owner'>
+<tr><td><td><input type="submit" value="Mis locales"></td></td></tr>
+</form>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

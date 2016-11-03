@@ -41,6 +41,9 @@ module.exports.routes = {
 
   '/consulta': {
     view: 'consulta'
+  },
+  '/miperfil':{
+    view: 'login'
   }
   
 /*<<<<<<< HEAD

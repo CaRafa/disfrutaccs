@@ -24,7 +24,13 @@ module.exports = {
     },
 
 
+
+
+
+
+
 	mostrar: function(req,res,next){
+
 
     Usuario_admin.findOne({id: req.param('id')}).exec(function(err,resultado){
     
@@ -35,6 +41,12 @@ module.exports = {
      });
     },
     
+
+
+
+
+
+
     consultar: function(req,res){
      res.view();
     },
@@ -54,6 +66,33 @@ module.exports = {
 
         
      });	
-    } 
+    },
+
+    perfil: function (req,res,next){
+
+            Usuario_admin.findOne({Alias:req.param('Alias')}).exec(function(err,resultado){
+            
+
+            if(resultado !== undefined){
+                if(req.param('clave')===resultado.clave){
+            return res.view({Usuario_admin:resultado});}
+            else{return res.notFound('Clave invalida');}
+            }
+
+            if(resultado === undefined){
+            return res.notFound('Perfil no existente');}
+
+                }
+            )
+
+
+    }
+ 
+
+
+
+
+
+
 
  };

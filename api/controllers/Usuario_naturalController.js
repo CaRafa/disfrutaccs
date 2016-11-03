@@ -77,6 +77,28 @@ module.exports = {
         res.redirect ('/Usuario_natural/mostrar/'+ req.param('id'));
         
      });
+    },
+
+    perfil: function (req,res,next){
+
+    		Usuario_natural.findOne({Alias:req.param('Alias')}).exec(function(err,resultado){
+    		
+
+    		if(resultado !== undefined ){
+    			
+    			if(resultado.clave === req.param('clave')){
+    			return res.view({Usuario_natural:resultado});}
+
+    			else{return res.notFound('Clave invalida');}
+
+    		}
+
+    		res.redirect ('/Usuario_admin/perfil/?Alias='+req.param('Alias')+'&clave='+req.param('clave'));
+
+    			}
+    		)
+
+
     }
 
 

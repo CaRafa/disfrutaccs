@@ -27,7 +27,7 @@ module.exports = {
       email:true,
       unique: true
     },
-    Contraseña: {
+    clave: {
       type: 'string'
     },
     locales: {

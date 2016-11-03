@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/styles/main.css">
+
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<title> DisfrutaCcs </title>	
+
+</head>
+
+<body>
+
+<nav class="se-gris padding-largo text-center">
+<ul class="no lista" id="no-lista">
+
+  <li class="col-md-3 inline-block lato " > <a href="http://localhost:1337/"> <b>DisfrutaCcs </b></a> </li>
+
+</ul>
+</nav>
+
+  <div align="center">
+
+
+<h5 class= "lato "> <i> Perfil de usuario </i> </h5>
+
+<h1 class="pacifico grande verde"><%= Usuario_natural.Nombre %></h1>
+<hr>
+
+
+<h2 class="lato"> Nombre de usuario:</h1>
+
+<h2 class = "lato mediano"> <b><%= Usuario_natural.Alias %></b></h1>
+
+<h2 class="lato"> Correo:</h1>
+
+<h2 class = "lato mediano"> <b><%= Usuario_natural.Correo %></b></h1>
+
+<h2 class="lato"> Presupuesto:</h1>
+
+<h2 class = "lato mediano"> <b>BsF. <%= Usuario_natural.Presupuesto %></b></h1>
+
+<br>
+
+<form action="/usuario_natural/editar/<%=Usuario_natural.id%>" >
+
+<tr><td><td><input type="submit" value="Editar perfil" class="lato"></td></td></tr>
+</form>
+<br>
+
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

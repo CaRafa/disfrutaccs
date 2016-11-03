@@ -42,7 +42,7 @@ module.exports = {
     Presupuesto: {
       type: 'float'
     },
-      Contraseña: {
+      clave: {
       type: 'string',
       unique: true,
       required: true
