@@ -19,7 +19,6 @@ module.exports = {
 
         res.redirect ('/Usuario_admin/mostrar/'+ Usuario_admin.id);
         
-
      });
     },
 
@@ -50,6 +49,9 @@ module.exports = {
     consultar: function(req,res){
      res.view();
     },
+
+
+
 
     buscar: function(req,res,next){
 

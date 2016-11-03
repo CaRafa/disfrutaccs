@@ -10,8 +10,8 @@ module.exports = {
   attributes: {
     
     Nombre: {
-      type: 'string'
-      , required: true
+      type: 'string',
+      required: true
     },
     Apellido: {
       type: 'string'
@@ -44,7 +44,6 @@ module.exports = {
     },
       clave: {
       type: 'string',
-      unique: true,
       required: true
     }
   } 
