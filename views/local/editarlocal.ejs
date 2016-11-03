@@ -27,7 +27,7 @@
 
 
 <form action = "/Local/actualizar/<%= Local.id %>" method= "POST">
-<h1 class="pacifico grande verde"> Editar Perfil </h1>
+<h1 class="pacifico grande verde"> Editar Local </h1>
 <hr>
 
 <h4 class = "lato "> Nombre </h1>
@@ -36,29 +36,13 @@
 <h4 class = "lato "> Edad minima </h1>
 <input value= "<%=  Local.Edad_minima %>" type="text" name="Edad_minima" class="lato text-center"><br />
 
+<h4 class = "lato "> Precio Base </h1>
+<input value= "<%=  Local.Preciobase %>" type="text" name="Preciobase" class="lato text-center"><br />
+
+<br>
 <input type="submit" value = "Guardar Cambios" class="lato">
 
 
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
