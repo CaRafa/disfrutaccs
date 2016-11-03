@@ -1,9 +1,5 @@
-
-<!DOCTYPE html>
-<html>
-
 <head>
-	
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <link rel="stylesheet" href="assets/styles/main.css">
@@ -12,9 +8,12 @@
 
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-<title> DisfrutaCcs </title>
+<title> DisfrutaCcs </title>	
 
 </head>
+
+
+  <div align="center">
 
 <body>
 
@@ -27,26 +26,39 @@
 </nav>
 
 
-  <div align="center">
-
-  <h2 class="lato"> <i> Local </i> </h2>
-
-<h1 class= "pacifico verde grande"><%= Local.Nombre %></h1>
+<form action = "/Local/actualizar/<%= Local.id %>" method= "POST">
+<h1 class="pacifico grande verde"> Editar Perfil </h1>
 <hr>
 
-<h2 class="lato "> Tipo de local: </h1>
+<h4 class = "lato "> Nombre </h1>
+<input value= "<%=  Local.Nombre %>" type="text" name="Nombre" class="lato text-center"><br />
 
-<h2 class = "lato mediano"> <b><%= Local.Tipodelocal %></b></h1>
+<h4 class = "lato "> Edad minima </h1>
+<input value= "<%=  Local.Edad_minima %>" type="text" name="Edad_minima" class="lato text-center"><br />
 
-<h2 class="lato "> Edad minima de ingreso: </h1>
-
-<h2 class = "lato mediano"> <b><%= Local.Edad_minima %></b></h1>
-
-<h2 class="lato "> Precio Base: </h1>
-
-<h2 class = "lato mediano"> <b> BsF. <%= Local.Preciobase %></b></h1>
+<input type="submit" value = "Guardar Cambios" class="lato">
 
 
 </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
