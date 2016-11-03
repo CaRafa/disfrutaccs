@@ -1,5 +1,5 @@
 /**
- * Usuario_natural.js
+ * Usuario_Natural.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
@@ -8,43 +8,33 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-    
-    Nombre: {
+    Sexo: {
       type: 'string',
-      required: true
-    },
-    Apellido: {
-      type: 'string'
-    },
-    Foto_perfil: {
-      type: 'int'
-    },
-    Correo: {
-      type: 'email',
-      email:true,
-      unique: true,
-      required: true
-    },
-    Alias: {
-      type: 'string',
-       unique: true,
-       required: true
-    },
-    Fecha_de_nacimiento: {
-      type: 'date'
-    },
-    sexo: {
-      type: 'string'
+      size:45,
+      notNull:true
     },
     Puntos: {
-      type: 'int'
-    },
-    Presupuesto: {
       type: 'float'
     },
-      clave: {
+    Latitud: {
+      type: 'float'
+    },
+    Longitud: {
+      type: 'float'
+    },
+    Presupuesto: {
+      type: 'float',
+      notNull:true
+    },
+    Contrasena: {
       type: 'string',
-      required: true
+      size:20,
+      notNull: true
+    },
+    owner:{
+      model:'Usuario',
+      unique: true
     }
-  } 
+}
 };
+
