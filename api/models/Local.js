@@ -49,6 +49,10 @@ module.exports = {
     owner: {
     model:'Usuario_admin',
     required: true
+    },
+    Resenas: {
+      collection: 'Resenas',
+      via:'owner'
     }
 
 

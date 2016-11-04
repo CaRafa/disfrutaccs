@@ -34,8 +34,19 @@ module.exports = {
     Local.findOne({id: req.param('id')}).exec(function(err,resultado){
     
     if (err) {return res.serverError(err);}
-    console.log(resultado);
-    res.view({Local:resultado});
+
+    Resenas.find({owner:resultado.id}).exec(function(err,resultadoresena){
+
+            if(resultadoresena === undefined){
+            return res.view({Local:resultado}); }
+            
+            else{
+                resultado.resenas = resultadoresena;
+                console.log(resultado.resenas);
+                res.view({Local:resultado});}
+
+              
+         });
         
      });
     },
@@ -51,18 +62,22 @@ module.exports = {
        
         if(nombre !== undefined) {
             Local.find({Nombre:{'contains':nombre}}).exec(function(err,resultado){
-    
+            
          if (err) {return res.serverError(err);}
 
-         if(resultado !== undefined) {
-            console.log(resultado);
-         res.view({Local:resultado});
-         }
-         if(resultado === undefined){
+         if (resultado === undefined){
             return res.notFound('No hay locales con ese nombre :c ');}
-             }); 
+         else {
+
+        res.view({Local:resultado});
+            
          }
-    },
+            
+      });      
+         
+}
+    }
+    ,
 
     mislocales: function(req,res,next){
         var id = req.param('owner');

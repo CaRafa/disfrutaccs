@@ -45,6 +45,10 @@ module.exports = {
       clave: {
       type: 'string',
       required: true
-    }
+    },
+   /* Resenas: {
+      collection: 'Resenas',
+      via:'owner'
+    }*/
   } 
 };

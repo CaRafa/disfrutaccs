@@ -17,7 +17,18 @@ module.exports = {
     },
      Comentario: {
       type: 'string'
+    }/*,
+    owner: {
+    model:'Usuario_natural',
+    required: true
+    }*/,
+    owner: {
+    model:'Local',
+    required: true
     }
+
+
+
   }
 };
 
