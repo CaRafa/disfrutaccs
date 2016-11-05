@@ -42,9 +42,9 @@ module.exports = {
       type: 'string',
       required: true
     },
-   /* Resenas: {
+    Resenas: {
       collection: 'Resenas',
-      via:'owner'
-    }*/
+      via:'idusuario'
+    }
   } 
 };

@@ -35,14 +35,14 @@ module.exports = {
     
     if (err) {return res.serverError(err);}
 
-    Resenas.find({owner:resultado.id}).exec(function(err,resultadoresena){
+    Resenas.find({idlocal:resultado.id}).exec(function(err,resultadoresena){
 
             if(resultadoresena === undefined){
             return res.view({Local:resultado}); }
             
             else{
+
                 resultado.resenas = resultadoresena;
-                console.log(resultado.resenas);
                 res.view({Local:resultado});}
 
               

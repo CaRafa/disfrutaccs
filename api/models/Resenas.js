@@ -17,12 +17,14 @@ module.exports = {
     },
      Comentario: {
       type: 'string'
-    }/*,
-    owner: {
+    },
+
+    idusuario: {
     model:'Usuario_natural',
     required: true
-    }*/,
-    owner: {
+    },
+    
+    idlocal: {
     model:'Local',
     required: true
     }

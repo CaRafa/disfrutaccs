@@ -86,7 +86,6 @@ module.exports = {
 
     if(resultado !== undefined) {
 
-    console.log(resultado);
     res.view({Usuario_natural:resultado});
     }
     if(resultado === undefined){

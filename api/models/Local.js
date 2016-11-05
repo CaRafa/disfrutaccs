@@ -52,7 +52,7 @@ module.exports = {
     },
     Resenas: {
       collection: 'Resenas',
-      via:'owner'
+      via:'idlocal'
     }
 
 
