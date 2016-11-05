@@ -63,15 +63,17 @@ th {
 <h2 class="lato "> Precio Base: </h1>
 
 <h2 class = "lato mediano"> <b> BsF. <%= Local.Preciobase %></b></h1>
-<br>
+
 
 <form action="/Resenas/nueva">
+
 <input type='hidden' name='owner' value='<%=Local.id%> ' >
-  Comentario:<br>
-  <input type="text" name="Comentario" value="comente aqui...">
+  <h2 class="lato "> Comentario: </h2>
+  <br>
+  <textarea name="Comentario" class= "lato" placeholder= "Deje su comentario aqui.." cols="40" rows="4"></textarea>
   <br>
   <br>
-  <input type="submit" value="comentar">
+  <input type="submit" value="Comentar">
 </form>
 </div>
 </article>

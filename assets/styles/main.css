@@ -106,5 +106,10 @@ input
 
 	text-decoration: none;
 	color: black;
+}
 
+.comment{
+
+	height: 100px;
+	width: 200px;
 }
