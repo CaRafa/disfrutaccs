@@ -10,14 +10,10 @@ module.exports = {
   attributes: {
     
     Nombre: {
-      type: 'string',
-      required: true
+      type: 'string'
     },
     Apellido: {
       type: 'string'
-    },
-    Foto_perfil: {
-      type: 'int'
     },
     Correo: {
       type: 'email',
@@ -42,7 +38,7 @@ module.exports = {
     Presupuesto: {
       type: 'float'
     },
-      clave: {
+    clave: {
       type: 'string',
       required: true
     },

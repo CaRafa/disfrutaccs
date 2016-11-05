@@ -30,17 +30,17 @@
 <br>
   <div align="center">
 
-  <h1 class="pacifico verde">Registro de Administrador</h1>
+  <h1 class="pacifico verde">Registro de Usuario</h1>
   
   <br>
   
   <label for="name" class="lato espacio-derecha"> Nombre</label >
+  <br>
+  <input type="text" class="text-center" placeholder="Nombre" name="Nombre" size="20" maxlength="45" >
+  <br>
+  <br>
   <label for="name" class="lato"> Apellido</label >
   <br>
-
-
-  <input type="text" class="text-center" placeholder="Nombre" name="Nombre" size="20" maxlength="45" >
-  
   <input type="text" class="text-center" placeholder="Apellido" name="Apellido" size="20" maxlength="45" >
 
   <br/>
@@ -64,6 +64,29 @@
   <input type="date" class="text-center" name="Fecha_de_nacimiento" size="20" maxlength="45" >
   <br />
 
+   <label for="name">Sexo</label ><br/>
+    <br>
+    
+   <input type="radio" class="lato" placeholder="Masculino" name="Sexo" value="Masculino"/>Masculino
+   <input type="radio" class="lato" placeholder="Femenido" name="Sexo" value="Femenino"/>Femenino
+   <input type="radio" class="lato" placeholder="Otro" name="Sexo" value="Otro"/>Otro
+   <br/>
+   <br/>
+   <br>
+
+   <label for="name" class="lato">Presupuesto</label ><br />
+
+   <input type="text" class="text-center" placeholder="Presupuesto" name="Presupuesto" size="20" maxlength="45" />
+   <br>
+   <br>
+   <script type="text/javascript" src="https://form.jotformz.com/jsform/62823544695667"></script>
+   <label for="name" class="lato">Ubicacion</label >
+   <br/>
+   <input type="text" class="text-center" placeholder="Latitud" name="Latitud" size="20" maxlength="20" ><br />
+   <br/>
+   <input type="text" class="text-center" placeholder="Longitud" name="Longitud" size="20" maxlength="20" ><br />
+   <br/>
+
   <br/>
       
 
@@ -75,8 +98,8 @@
   <br/>
   <br/>
 
-  <div align = "center" class="lato">
-  <input type="submit" value="Registrar Administrador" action="/usuario_admin/registrar"> 
+  <div align = "center">
+  <input type="submit" value="Registrar Usuario" action="/usuario_admin/registrar"> 
 
   </div>
   <br/>

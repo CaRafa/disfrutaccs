@@ -23,11 +23,6 @@ module.exports = {
     },
 
 
-
-
-
-
-
 	mostrar: function(req,res,next){
 
 
@@ -40,17 +35,9 @@ module.exports = {
      });
     },
     
-
-
-
-
-
-
     consultar: function(req,res){
      res.view();
     },
-
-
 
 
     buscar: function(req,res,next){
@@ -68,6 +55,29 @@ module.exports = {
 
         
      });	
+    },
+
+    actualizar: function(req, res,next){
+
+      Usuario_admin.update(req.param('id'), req.params.all() , function Usuario_naturalactualizado (err) {
+      if(err) {return res.redirect('/Usuario_admin/editar/'+req.param('id'));}
+
+      res.redirect ('/Usuario_admin/mostrar/'+ req.param('id'));
+        
+     });
+    },
+
+    editar: function(req,res,next){
+    Usuario_admin.findOne({id: req.param('id')}).exec(function(err,resultado){
+    if (err) {return res.serverError(err);}
+    
+    if(resultado !== undefined) {
+    res.view({Usuario_admin:resultado});
+    }
+    if(resultado === undefined){
+    return res.notFound('Errooor');}
+        
+     });
     },
 
     perfil: function (req,res,next){
@@ -89,12 +99,4 @@ module.exports = {
 
 
     }
- 
-
-
-
-
-
-
-
- };
+  };

@@ -15,27 +15,38 @@ module.exports = {
     Apellido: {
       type: 'string'
     },
-     Fecha_de_nacimiento: {
-      type: 'date'
+    Correo: {
+      type: 'email',
+      email:true,
+      unique: true,
+      required: true
     },
     Alias: {
       type: 'string',
-       unique: true
+       unique: true,
+       required: true
     },
-    Correo: {
-      type: 'string',
-      email:true,
-      unique: true
+    Fecha_de_nacimiento: {
+      type: 'date'
+    },
+    sexo: {
+      type: 'string'
+    },
+    Puntos: {
+      type: 'int'
+    },
+    Presupuesto: {
+      type: 'float',
+      required: false
     },
     clave: {
-      type: 'string'
+      type: 'string',
+      required: true
     },
     locales: {
       collection: 'Local',
       via:'owner'
     }
-
-
 
   }
 };

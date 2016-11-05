@@ -19,20 +19,17 @@
 
   <li  > <a href="http://localhost:1337/"> DisfrutaCcs </a> </li>
   
-  <li class="col-md-3 inline-block">Consultar</li>
-
-
 </ul>
 </nav>
 <div align="center">
-
-<h1 class="pacifico grande verde"> Perfil de administrador </h1>
+<h2 class= "lato"> <i> Perfil de usuario </i> </h2>
+<h1 class="pacifico grande verde"><b><%= Usuario_admin.Alias %></b></h1>
 
 
 <hr>
 
 <h2 class="lato"> Nombre </h2>
-<h2 class="lato mediano"><b><%= Usuario_admin.Nombre %></b></h2>
+<h2 class="lato mediano"><b><%= Usuario_admin.Alias %></b></h2>
 
 <h2 class="lato"> Nombre de usuario </h2>
 
@@ -44,11 +41,6 @@
 
 <br>
 
-
-
-<form action="/" >
-<tr><td><td><input type="submit" value="Volver"></td></td></tr>
-</form>
 <br>
 <form action="/Local/registrar/" >
 <tr><td><td><input type="submit" value="Registrar Local"></td></td></tr>
@@ -59,6 +51,13 @@
 <input type='hidden' value= "<%= Usuario_admin.id %>" name='owner'>
 <tr><td><td><input type="submit" value="Mis locales"></td></td></tr>
 </form>
+<br>
+
+<form action="/Usuario_admin/editar/<%=Usuario_admin.id%>" >
+
+<tr><td><td><input type="submit" value="Editar perfil" class="lato"></td></td></tr>
+</form>
+<br>
 
 
 </div>

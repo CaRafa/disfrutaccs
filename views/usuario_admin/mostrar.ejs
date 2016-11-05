@@ -28,7 +28,7 @@
   <div align="center">
 
 
-<h2 class="pacifico grande verde"> Administrador </h2>
+<h2 class="pacifico grande verde"> Usuario creado </h2>
 <hr>
 
 <h2 class="lato"> Nombre </h2>
@@ -41,11 +41,22 @@
 
 <h2 class="lato"> Correo </h2>
 
-
 <h2 class="lato mediano"> <b><%= Usuario_admin.Correo %></b></h2>
+
+<h2 class="lato"> Presupuesto:</h1>
+
+<h2 class = "lato mediano"> <b>BsF. <%= Usuario_admin.Presupuesto %></b></h1>
 
 <br>
 
+<br>
+
+
+<form action="/usuario_admin/editar/<%=Usuario_admin.id%>" >
+
+<tr><td><td><input type="submit" value="Editar perfil" class="lato"></td></td></tr>
+</form>
+<br>
 <form action="/Local/registrar/" >
 <tr><td><td><input type="submit" value="Registrar Local" class="lato"></td></td></tr>
 <input type='hidden' value= "<%= Usuario_admin.id %>" name='owner'>
