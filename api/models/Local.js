@@ -8,19 +8,18 @@
 module.exports = {
   connection: 'mysql',
     attributes: {
-    /*idLocal: {
-    type: 'string',
-    unique: true
-    },*/
+    idLocal: {
+    type: 'integer',
+    unique: true,
+    autoIncrement: true
+    },
     Nombre: {
       type: 'string',
+      size:100,
       required: true
-    },/*
-    Foto_perfil: {
-      type: 'int'
-    },*/
+    },
     Edad_minima: {
-      type: 'int'
+      type: 'integer'
     },
     Latitud: {
       type: 'float'
@@ -29,7 +28,7 @@ module.exports = {
       type: 'float'
     },
     Nro_reseñas: {
-      type: 'int'
+      type: 'float'
     },
     Puntaje: {
       type: 'float'
@@ -38,7 +37,8 @@ module.exports = {
       type: 'float'
     },
     Telefono: {
-      type: 'int'
+      type: 'string',
+      size:45
     },
     Tipodelocal: {
       type: 'string'
@@ -47,14 +47,9 @@ module.exports = {
       type: 'string'
     },
     owner: {
-    model:'Usuario_admin',
+    model:'Usuario',
     required: true
     }
-
-
-
-
-
   }
 };
 

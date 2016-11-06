@@ -11,8 +11,7 @@ module.exports = {
     ID_U: {
       type: 'integer',
        unique: true,
-        autoIncrement: true,
-        notNull: true
+        autoIncrement: true
     },
     Nombre: {
       type: 'string',
