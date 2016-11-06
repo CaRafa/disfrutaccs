@@ -24,7 +24,7 @@
 </nav>
 
 
-<form action="/Usuario_natural/create" method="POST" >
+<form action="/Usuario/create" method="POST" >
   <div align="center">
 
   <h1 class="pacifico verde">Registro de Usuario</h1>
@@ -36,26 +36,27 @@
   <br>
 
 
-   <input type="text" class="text-center" placeholder="Nombre" name="Nombre" size="20" maxlength="45" >
-   <input type="text" class="text-center" placeholder="Apellido" name="Apellido" size="20" maxlength="45" >
+   <input type="text" class="text-center" placeholder="Juan" name="Nombre" size="20" maxlength="45" >
+   <input type="text" class="text-center" placeholder="perez" name="Apellido" size="20" maxlength="45" >
 
    <br/>
    <br/>
    
-   <label for="name">Edad</label ><br/>
-   <input type="number" class="text-center" name="Edad" size="20" maxlength="45" ><br />
+   <label for="name">Fecha de nacimiento</label ><br/>
+   <input type="date" class="text-center" name="Fecha_de_nacimiento"><br />
    <br/>
 
+   <script>
+Fecha_de_consulta=document.innerHTML = Date(day,month,year);
+</script>
+ 
+
    <label for="name">Correo Electronico</label ><br/>
-   <input type="email" class="text-center" placeholder="pepitoperez@correo.com" name="Correo" size="20" maxlength="200" ><br />
+   <input type="email" class="text-center" placeholder="juanperez@correo.com" name="Correo" size="20" maxlength="200" ><br />
    <br/>
 
    <label for="name">Alias</label ><br/>
    <input type="text" class="text-center" placeholder="Rockpepe" name="Alias" size="20" maxlength="45" ><br />
-   <br/>
-
-   <label for="name">Fecha de Nacimiento</label ><br/>
-   <input type="date" class="text-center" name="Fecha_de_nacimiento" size="20" maxlength="45" ><br />
    <br/>
 
    <label for="name">Sexo</label ><br/>
@@ -68,26 +69,13 @@
    <br/>
    <br>
 
-   <label for="name">Presupuesto</label ><br />
-
-   <input type="text" class="text-center" placeholder="Presupuesto" name="Presupuesto" size="20" maxlength="45" />
-
-   <script type="text/javascript" src="https://form.jotformz.com/jsform/62823544695667"></script>
-   <label for="name">Ubicacion</label >
-   <br/>
-   <input type="text" class="text-center" placeholder="Latitud" name="Latitud" size="20" maxlength="20" ><br />
-   <br/>
-   <input type="text" class="text-center" placeholder="Longitud" name="Longitud" size="20" maxlength="20" ><br />
-   <br/>
-
    <label for="name">clave</label ><br/>
-   <br/>
    <input type="password" class="text-center" placeholder="clave" name="clave" size="20" maxlength="20" ><br />
    <br/>
    <br/>
 
    <div align = "center">
-   <input type="submit" class="lato" value="Registrar Usuario" action="/usuario_natural/registrar"> 
+   <input type="submit" class="lato" value="Registrar Usuario" action="/usuario/registrar"> 
   
    </div>
 

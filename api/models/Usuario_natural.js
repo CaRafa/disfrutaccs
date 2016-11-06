@@ -28,7 +28,6 @@ module.exports = {
     },
     owner:{
       model:'Usuario',
-      unique: true
     },
     pets: {
       collection: 'Categorias_preferidas',

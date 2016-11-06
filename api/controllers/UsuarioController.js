@@ -15,11 +15,11 @@ module.exports = {
 
     create: function(req,res,next){
 
-    Usuario_natural.create(req.params.all(), function Usuario_naturalcreado (err, Usuario_natural) {
+    Usuario.create(req.params.all(), function Usuario_naturalcreado (err, Usuario) {
         if(err) {return next(err);}
 
                 
-          res.redirect ('/Usuario_natural/mostrar/'+ Usuario_natural.id);
+          res.redirect ('/Usuario/mostrar/'+ Usuario.id_natural);
 
       });
     },
@@ -64,12 +64,12 @@ module.exports = {
 
 
 	mostrar: function(req,res,next){
-    Usuario_natural.findOne({id: req.param('id')}).exec(function(err,resultado){
+    Usuario.findOne({id: req.param('id')}).exec(function(err,resultado){
 
     console.log(resultado)
     if (err) {return res.serverError(err);}
     console.log(resultado);
-    res.view({Usuario_natural:resultado});
+    res.view({Usuario:resultado});
         
      });
     },
@@ -80,14 +80,14 @@ module.exports = {
 
     buscar: function(req,res,next){
 
-    Usuario_natural.find({Alias:{'contains':req.param('Alias')} }).exec(function(err,resultado){
+    Usuario.find({Alias:{'contains':req.param('Alias')} }).exec(function(err,resultado){
     
     if (err) {return res.serverError(err);}
 
     if(resultado !== undefined) {
 
     console.log(resultado);
-    res.view({Usuario_natural:resultado});
+    res.view({Usuario:resultado});
     }
     if(resultado === undefined){
     return res.notFound('Could not find, sorry.');}
@@ -97,11 +97,11 @@ module.exports = {
     } ,
 
     editar: function(req,res,next){
-	Usuario_natural.findOne({id: req.param('id')}).exec(function(err,resultado){
+	Usuario.findOne({id: req.param('id')}).exec(function(err,resultado){
     if (err) {return res.serverError(err);}
     
     if(resultado !== undefined) {
-    res.view({Usuario_natural:resultado});
+    res.view({Usuario:resultado});
     }
     if(resultado === undefined){
     return res.notFound('Errooor');}
@@ -111,29 +111,29 @@ module.exports = {
 
     actualizar: function(req, res,next){
 
-    	Usuario_natural.update(req.param('id'), req.params.all() , function Usuario_naturalactualizado (err) {
-    	if(err) {return res.redirect('/Usuario_natural/editar/'+req.param('id'));}
+    	Usuario.update(req.param('id'), req.params.all() , function Usuarioactualizado (err) {
+    	if(err) {return res.redirect('/Usuario/editar/'+req.param('id'));}
 
-        res.redirect ('/Usuario_natural/mostrar/'+ req.param('id'));
+        res.redirect ('/Usuario/mostrar/'+ req.param('id'));
         
      });
     },
 
     perfil: function (req,res,next){
 
-    		Usuario_natural.findOne({Alias:req.param('Alias')}).exec(function(err,resultado){
+    		Usuario.findOne({Alias:req.param('Alias')}).exec(function(err,resultado){
     		
 
     		if(resultado !== undefined ){
     			
     			if(resultado.clave === req.param('clave')){
-    			return res.view({Usuario_natural:resultado});}
+    			return res.view({Usuario:resultado});}
 
     			else{return res.notFound('Clave invalida');}
 
     		}
 
-    		res.redirect ('/Usuario_admin/perfil/?Alias='+req.param('Alias')+'&clave='+req.param('clave'));
+    		res.redirect ('/Usuario/perfil/?Alias='+req.param('Alias')+'&clave='+req.param('clave'));
 
     			}
     		)

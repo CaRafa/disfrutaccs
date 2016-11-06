@@ -29,12 +29,10 @@ module.exports = {
       notNull:true
     },
     Fecha_de_consulta: {
-      type: 'date',
-      notNull:true
+      type: 'date'
     },
     Edad: {
       type: 'integer',
-      notNull:true
     },
     Indentificador: {
       type: 'boolean'
