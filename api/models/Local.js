@@ -8,7 +8,7 @@
 module.exports = {
   connection: 'mysql',
     attributes: {
-    idLocal: {
+    id_local: {
     type: 'integer',
     unique: true,
     autoIncrement: true
@@ -27,6 +27,10 @@ module.exports = {
     Longitud: {
       type: 'float'
     },
+    Direccion: {
+      type: 'string', 
+      size:200
+    },
     Nro_reseñas: {
       type: 'float'
     },
@@ -34,21 +38,24 @@ module.exports = {
       type: 'float'
     },
     Preciobase: {
-      type: 'float'
+      type: 'float',
+      notNull:true
     },
     Telefono: {
       type: 'string',
-      size:45
+      size:45,
+      notNull:true
     },
     Tipodelocal: {
-      type: 'string'
+      type: 'string',
+      notNull:true
     },
     descripcion: {
-      type: 'string'
+      type: 'string',
+      notNull:true
     },
     owner: {
-    model:'Usuario',
-    required: true
+    model:'Usuario'
     }
   }
 };

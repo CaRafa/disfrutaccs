@@ -26,14 +26,13 @@ module.exports = {
       type: 'float',
       notNull:true
     },
-    Contrasena: {
-      type: 'string',
-      size:20,
-      notNull: true
-    },
     owner:{
       model:'Usuario',
       unique: true
+    },
+    pets: {
+      collection: 'Categorias_preferidas',
+      via: 'owner'
     }
 }
 };

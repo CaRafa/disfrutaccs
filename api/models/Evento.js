@@ -8,16 +8,22 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-    
+    id_evento: {
+    type: 'integer',
+    unique: true,
+    autoIncrement: true
+    },
     Nombre: {
       type: 'string',
+       size:100,
       required: true
     },
     Categoria: {
-      type: 'string'
+      type: 'string',
+       size:20
     },
      Descripcion: {
-      type: 'string'
+      type: 'text'
     },
     Fecha_ini: {
       type: 'date',
@@ -28,10 +34,16 @@ module.exports = {
       required: true
     },
     Edad_min: {
-      type: 'int'
+      type: 'integer'
     },
     Nro_resenas: {
-      type: 'int'
+      type: 'float'
+    },
+    Puntaje: {
+      type: 'float'
+    },
+    owner: {
+    model:'Usuario'
     }
    }
 };

@@ -1,22 +1,28 @@
 /**
- * Resenas.js
+ * Amigos.js
  *
  * @description :: TODO: You might write a short summary of how this model works and what it represents here.
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
 module.exports = {
-  connection: 'mysql',
+
   attributes: {
-    
+    id_amigos: {
+    type: 'integer',
+    required:true
+    },
+    Alias_amigo: {
+      type: 'string',
+      size:45,
+      required: true
+    },
     Puntaje: {
-      type: 'int'
+      type: 'float'
     },
-    Fecha_resena: {
-      type: 'date'
-    },
-     Comentario: {
-      type: 'string'
+    id_usuario_a: {
+    type: 'integer',
+    required:true
     }
   }
 };

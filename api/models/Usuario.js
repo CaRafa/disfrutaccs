@@ -8,10 +8,10 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-    ID_U: {
+    id_usuario: {
       type: 'integer',
        unique: true,
-        autoIncrement: true
+       autoIncrement: true
     },
     Nombre: {
       type: 'string',
@@ -55,8 +55,24 @@ module.exports = {
       size:20,
       required: true
     },
-        pet: {
+    pet: {
       collection:'Usuario_Natural',
+      via: 'owner'
+    },
+    pets: {
+      collection: 'Local',
+      via: 'owner'
+    },
+    pets: {
+      collection: 'Evento',
+      via: 'owner'
+    },
+    pets: {
+      collection: 'Resena',
+      via: 'owner'
+    },
+    pets: {
+      collection: 'Recomendar',
       via: 'owner'
     }
   } 
