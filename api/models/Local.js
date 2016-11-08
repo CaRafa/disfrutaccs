@@ -55,7 +55,16 @@ module.exports = {
       notNull:true
     },
     owner: {
+<<<<<<< HEAD
     model:'Usuario'
+=======
+    model:'Usuario_admin',
+    required: true
+    },
+    Resenas: {
+      collection: 'Resenas',
+      via:'idlocal'
+>>>>>>> origin/master
     }
   }
 };

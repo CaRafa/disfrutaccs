@@ -16,11 +16,28 @@ module.exports = {
       type: 'date'
     },
      Comentario: {
+<<<<<<< HEAD:api/models/Resena.js
       type: 'text'
     },
     owner: {
     model:'Usuario'
+=======
+      type: 'string'
+    },
+
+    idusuario: {
+    model:'Usuario_natural',
+    required: true
+    },
+    
+    idlocal: {
+    model:'Local',
+    required: true
+>>>>>>> origin/master:api/models/Resenas.js
     }
+
+
+
   }
 };
 

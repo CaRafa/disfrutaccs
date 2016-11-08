@@ -86,3 +86,30 @@ input
 	height: 28px;
 	width: 210px;
 }
+
+.nav{
+
+	list-style: none;
+	padding: 20px 0 20px 0;
+	font-family: 'Lato', sans-serif;
+}
+
+.nav > li {
+
+	display: inline-block;
+	padding-right: 50px;
+	color: pink;
+
+}
+
+.nav > li > a {
+
+	text-decoration: none;
+	color: black;
+}
+
+.comment{
+
+	height: 100px;
+	width: 200px;
+}

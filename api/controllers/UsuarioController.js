@@ -86,8 +86,12 @@ module.exports = {
 
     if(resultado !== undefined) {
 
+<<<<<<< HEAD:api/controllers/UsuarioController.js
     console.log(resultado);
     res.view({Usuario:resultado});
+=======
+    res.view({Usuario_natural:resultado});
+>>>>>>> origin/master:api/controllers/Usuario_naturalController.js
     }
     if(resultado === undefined){
     return res.notFound('Could not find, sorry.');}

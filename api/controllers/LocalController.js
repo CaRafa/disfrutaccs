@@ -34,8 +34,19 @@ module.exports = {
     Local.findOne({id: req.param('id')}).exec(function(err,resultado){
     
     if (err) {return res.serverError(err);}
-    console.log(resultado);
-    res.view({Local:resultado});
+
+    Resenas.find({idlocal:resultado.id}).exec(function(err,resultadoresena){
+
+            if(resultadoresena === undefined){
+            return res.view({Local:resultado}); }
+            
+            else{
+
+                resultado.resenas = resultadoresena;
+                res.view({Local:resultado});}
+
+              
+         });
         
      });
     },
@@ -46,7 +57,29 @@ module.exports = {
     },
 
     buscar: function(req,res,next){
+
         var nombre = req.param('Nombre');
+       
+        if(nombre !== undefined) {
+            Local.find({Nombre:{'contains':nombre}}).exec(function(err,resultado){
+            
+         if (err) {return res.serverError(err);}
+
+         if (resultado === undefined){
+            return res.notFound('No hay locales con ese nombre :c ');}
+         else {
+
+        res.view({Local:resultado});
+            
+         }
+            
+      });      
+         
+}
+    }
+    ,
+
+    mislocales: function(req,res,next){
         var id = req.param('owner');
 
         if(id !== undefined){ Local.find({owner:id}).exec(function(err,resultado){
@@ -62,21 +95,31 @@ module.exports = {
             });  
         };
 
-        if(nombre !== undefined) {
-            Local.find({Nombre:{'contains':nombre}}).exec(function(err,resultado){
+    },
+
+
+    editarlocal: function(req,res,next){
+
+    Local.findOne({id: req.param('id')}).exec(function(err,resultado){
+    if (err) {return res.serverError(err);}
     
-         if (err) {return res.serverError(err);}
-
-         if(resultado !== undefined) {
-            console.log(resultado);
-         res.view({Local:resultado});
-         }
-         if(resultado === undefined){
-            return res.notFound('No hay locales con ese nombre :c ');}
-             }); 
-         }
+    if(resultado !== undefined) {
+    res.view({Local:resultado});
     }
+    if(resultado === undefined){
+    return res.notFound('Errooor');}
+        
+     });
+    },
 
+    actualizar: function(req, res,next){
+
+        Local.update(req.param('id'), req.params.all() , function Localactualizado (err) {
+        if(err) {return res.redirect('/Local/editar/'+req.param('id'));}
+
+        res.redirect ('/Local/mostrar/'+ req.param('id'));
+     });
+    }
 
 };
 
