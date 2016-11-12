@@ -44,18 +44,15 @@ module.exports.routes = {
   },
   '/miperfil':{
     view: 'login'
-  }
-  
-/*<<<<<<< HEAD
   },
+  
   '/login': {
-    view: 'login'*/
- /* }/*,
+    view: 'login'
+  },
   '/mostrar' : {
     view: 'mostrar'
-  }*/
- /* }
-  ,
+  },
+
   '/login_usuario': {
     view: 'login_usuario'
   }
@@ -78,7 +75,7 @@ module.exports.routes = {
   ,
   '/consultar_local': {
     view: 'consultar_local'
-  }*/
+  }
 
   /***************************************************************************
   *                                                                          *

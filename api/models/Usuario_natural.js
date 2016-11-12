@@ -8,7 +8,6 @@
 module.exports = {
   connection: 'mysql',
   attributes: {
-<<<<<<< HEAD
     Sexo: {
       type: 'string',
       size:45,
@@ -16,8 +15,7 @@ module.exports = {
     },
     Puntos: {
       type: 'float'
-=======
-    
+    },
     Nombre: {
       type: 'string'
     },
@@ -37,7 +35,6 @@ module.exports = {
     },
     Fecha_de_nacimiento: {
       type: 'date'
->>>>>>> origin/master
     },
     Latitud: {
       type: 'float'
@@ -49,14 +46,13 @@ module.exports = {
       type: 'float',
       notNull:true
     },
-<<<<<<< HEAD
     owner:{
       model:'Usuario',
     },
     pets: {
       collection: 'Categorias_preferidas',
       via: 'owner'
-=======
+    },
     clave: {
       type: 'string',
       required: true
@@ -64,7 +60,6 @@ module.exports = {
     Resenas: {
       collection: 'Resenas',
       via:'idusuario'
->>>>>>> origin/master
     }
 }
 };
