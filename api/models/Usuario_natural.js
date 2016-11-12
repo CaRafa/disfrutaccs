@@ -57,8 +57,8 @@ module.exports = {
       type: 'string',
       required: true
     },
-    Resenas: {
-      collection: 'Resenas',
+    Resena: {
+      collection: 'Resena',
       via:'owner'
     }
   }
