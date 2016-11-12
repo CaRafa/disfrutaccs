@@ -59,8 +59,8 @@ module.exports = {
     },
     Resenas: {
       collection: 'Resenas',
-      via:'idusuario'
+      via:'owner'
     }
-}
+  }
 };
 

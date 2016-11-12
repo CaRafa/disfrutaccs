@@ -52,18 +52,17 @@ module.exports = {
     },
     descripcion: {
       type: 'string',
-      notNull:true
+      notNull:true,
+      required:true
     },
     owner: {
-
-    model:'Usuario',
-    model:'Usuario_admin',
-    required: true
+      model: 'Usuario'
     },
-    Resenas: {
-      collection: 'Resenas',
-      via:'idlocal'
-    }
+    /*
+    pets: {
+      collection: 'Resena',
+      via: 'owner'
+    }*/
   }
 };
 

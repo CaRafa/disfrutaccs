@@ -12,12 +12,15 @@ module.exports = {
     Puntaje: {
       type: 'integer'
     },
+    
     Fecha_resena: {
       type: 'date'
     },
+
      Comentario: {
       type: 'text'
     },
+
     owner: {
     model:'Usuario'
     },
@@ -26,7 +29,7 @@ module.exports = {
     model:'Usuario_natural',
     required: true
     },
-    
+
     idlocal: {
     model:'Local',
     required: true
